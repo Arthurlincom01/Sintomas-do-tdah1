@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Vendas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+    }
+
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      color: #25d366;
+    }
+
+    button, .whatsapp {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Conteúdo Informativo sobre TDAH</h1>
+  <p>Entrega rápida após confirmação</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>O que você vai receber?</h2>
+    <ul>
+      <li>Texto claro sobre sintomas do TDAH</li>
+      <li>Conteúdo organizado e fácil de entender</li>
+      <li>Entrega em até 12 horas</li>
+    </ul>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <h2>Valor</h2>
+    <p class="price">R$ 15,00</p>
+    <button onclick="mostrarPix()">Comprar agora</button>
+  </div>
+
+  <div id="pixBox" class="card hidden">
+    <h3>Pagamento via Pix</h3>
+    <p><strong>Valor:</strong> R$ 15,00</p>
+    <p><strong>Chave Pix:</strong><br>
+      c6fee96d-c889-456f-93e1-c0785e5a92f8
+    </p>
+    <button onclick="jaPaguei()">Já paguei</button>
+  </div>
+
+  <div id="confirmacaoBox" class="card hidden">
+    <h2>Compra registrada ✅</h2>
+    <p>
+      Os sintomas do TDAH serão enviados em até <strong>12 horas</strong>.
+    </p>
+    <p>
+      Para agilizar a entrega, entre em contato:
+    </p>
+
+    <a class="whatsapp"
+       href="https://wa.me/5513997734428?text=Olá,%20já%20realizei%20o%20pagamento.%20Aguardo%20a%20entrega."
+       target="_blank">
+      Falar no WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<script>
+  function mostrarPix() {
+    document.getElementById("pixBox").classList.remove("hidden");
+  }
+
+  function jaPaguei() {
+    document.getElementById("confirmacaoBox").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
